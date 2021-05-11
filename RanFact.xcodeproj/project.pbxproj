@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05C91FD639D32FF4A171E683 /* Pods_RanFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFAB8A6FF5FFC20AB269C9F /* Pods_RanFactTests.framework */; };
+		40F263E889760F7A55851AB1 /* Pods_RanFact_RanFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4006EE66664F3C792342F948 /* Pods_RanFact_RanFactUITests.framework */; };
+		8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */; };
 		B43ED26B26498096001078EA /* RanFactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26A26498096001078EA /* RanFactApp.swift */; };
 		B43ED26D26498096001078EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26C26498096001078EA /* ContentView.swift */; };
 		B43ED26F26498098001078EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43ED26E26498098001078EA /* Assets.xcassets */; };
@@ -15,6 +18,8 @@
 		B43ED27726498098001078EA /* RanFact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43ED27526498098001078EA /* RanFact.xcdatamodeld */; };
 		B43ED28226498098001078EA /* RanFactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED28126498098001078EA /* RanFactTests.swift */; };
 		B43ED28D26498098001078EA /* RanFactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED28C26498098001078EA /* RanFactUITests.swift */; };
+		B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9E8264AD13400B7EA6B /* MainView.swift */; };
+		B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9EA264AD18B00B7EA6B /* YearView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20E2057B11290A8F0D60ACE3 /* Pods-RanFact-RanFactUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFact-RanFactUITests.debug.xcconfig"; path = "Target Support Files/Pods-RanFact-RanFactUITests/Pods-RanFact-RanFactUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		25A855B839F61A43B1FF0B94 /* Pods-RanFact.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFact.debug.xcconfig"; path = "Target Support Files/Pods-RanFact/Pods-RanFact.debug.xcconfig"; sourceTree = "<group>"; };
+		39EBCDC57713B0366C86B600 /* Pods-RanFact-RanFactUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFact-RanFactUITests.release.xcconfig"; path = "Target Support Files/Pods-RanFact-RanFactUITests/Pods-RanFact-RanFactUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4006EE66664F3C792342F948 /* Pods_RanFact_RanFactUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanFact_RanFactUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4BE11DC2CC86C6EC0E7D66 /* Pods-RanFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.debug.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AF638395CC6EA1B364595957 /* Pods-RanFactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.release.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.release.xcconfig"; sourceTree = "<group>"; };
 		B43ED26726498096001078EA /* RanFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RanFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43ED26A26498096001078EA /* RanFactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanFactApp.swift; sourceTree = "<group>"; };
 		B43ED26C26498096001078EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +61,10 @@
 		B43ED28826498098001078EA /* RanFactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RanFactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43ED28C26498098001078EA /* RanFactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanFactUITests.swift; sourceTree = "<group>"; };
 		B43ED28E26498098001078EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4CDF9E8264AD13400B7EA6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B4CDF9EA264AD18B00B7EA6B /* YearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearView.swift; sourceTree = "<group>"; };
+		E48EF32670E02DE456F8587B /* Pods-RanFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFact.release.xcconfig"; path = "Target Support Files/Pods-RanFact/Pods-RanFact.release.xcconfig"; sourceTree = "<group>"; };
+		FBFAB8A6FF5FFC20AB269C9F /* Pods_RanFactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanFactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05C91FD639D32FF4A171E683 /* Pods_RanFactTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +88,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F263E889760F7A55851AB1 /* Pods_RanFact_RanFactUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		075DB01946EF6E551A733E33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25A855B839F61A43B1FF0B94 /* Pods-RanFact.debug.xcconfig */,
+				E48EF32670E02DE456F8587B /* Pods-RanFact.release.xcconfig */,
+				20E2057B11290A8F0D60ACE3 /* Pods-RanFact-RanFactUITests.debug.xcconfig */,
+				39EBCDC57713B0366C86B600 /* Pods-RanFact-RanFactUITests.release.xcconfig */,
+				5C4BE11DC2CC86C6EC0E7D66 /* Pods-RanFactTests.debug.xcconfig */,
+				AF638395CC6EA1B364595957 /* Pods-RanFactTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A187BA16E189823897E4120B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */,
+				4006EE66664F3C792342F948 /* Pods_RanFact_RanFactUITests.framework */,
+				FBFAB8A6FF5FFC20AB269C9F /* Pods_RanFactTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B43ED25E26498096001078EA = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +125,8 @@
 				B43ED28026498098001078EA /* RanFactTests */,
 				B43ED28B26498098001078EA /* RanFactUITests */,
 				B43ED26826498096001078EA /* Products */,
+				075DB01946EF6E551A733E33 /* Pods */,
+				A187BA16E189823897E4120B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,6 +150,8 @@
 				B43ED27826498098001078EA /* Info.plist */,
 				B43ED27526498098001078EA /* RanFact.xcdatamodeld */,
 				B43ED27026498098001078EA /* Preview Content */,
+				B4CDF9E8264AD13400B7EA6B /* MainView.swift */,
+				B4CDF9EA264AD18B00B7EA6B /* YearView.swift */,
 			);
 			path = RanFact;
 			sourceTree = "<group>";
@@ -143,6 +189,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B43ED29126498098001078EA /* Build configuration list for PBXNativeTarget "RanFact" */;
 			buildPhases = (
+				B6CFA3A4158D446867F7712F /* [CP] Check Pods Manifest.lock */,
 				B43ED26326498096001078EA /* Sources */,
 				B43ED26426498096001078EA /* Frameworks */,
 				B43ED26526498096001078EA /* Resources */,
@@ -160,6 +207,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B43ED29426498098001078EA /* Build configuration list for PBXNativeTarget "RanFactTests" */;
 			buildPhases = (
+				7996428050310BC721B4E265 /* [CP] Check Pods Manifest.lock */,
 				B43ED27926498098001078EA /* Sources */,
 				B43ED27A26498098001078EA /* Frameworks */,
 				B43ED27B26498098001078EA /* Resources */,
@@ -178,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B43ED29726498098001078EA /* Build configuration list for PBXNativeTarget "RanFactUITests" */;
 			buildPhases = (
+				3D142D3FE0F2DEE714BE2FFD /* [CP] Check Pods Manifest.lock */,
 				B43ED28426498098001078EA /* Sources */,
 				B43ED28526498098001078EA /* Frameworks */,
 				B43ED28626498098001078EA /* Resources */,
@@ -260,14 +309,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3D142D3FE0F2DEE714BE2FFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RanFact-RanFactUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7996428050310BC721B4E265 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RanFactTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6CFA3A4158D446867F7712F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RanFact-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B43ED26326498096001078EA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B43ED27426498098001078EA /* Persistence.swift in Sources */,
+				B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */,
 				B43ED26D26498096001078EA /* ContentView.swift in Sources */,
 				B43ED26B26498096001078EA /* RanFactApp.swift in Sources */,
+				B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */,
 				B43ED27726498098001078EA /* RanFact.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,6 +542,7 @@
 		};
 		B43ED29226498098001078EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A855B839F61A43B1FF0B94 /* Pods-RanFact.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -444,6 +565,7 @@
 		};
 		B43ED29326498098001078EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E48EF32670E02DE456F8587B /* Pods-RanFact.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +588,7 @@
 		};
 		B43ED29526498098001078EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C4BE11DC2CC86C6EC0E7D66 /* Pods-RanFactTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -488,6 +611,7 @@
 		};
 		B43ED29626498098001078EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF638395CC6EA1B364595957 /* Pods-RanFactTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -510,6 +634,7 @@
 		};
 		B43ED29826498098001078EA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20E2057B11290A8F0D60ACE3 /* Pods-RanFact-RanFactUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +655,7 @@
 		};
 		B43ED29926498098001078EA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39EBCDC57713B0366C86B600 /* Pods-RanFact-RanFactUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
