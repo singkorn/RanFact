@@ -12,7 +12,6 @@
 		8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */; };
 		B43ED26B26498096001078EA /* RanFactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26A26498096001078EA /* RanFactApp.swift */; };
 		B43ED26D26498096001078EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26C26498096001078EA /* ContentView.swift */; };
-		B43ED26F26498098001078EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43ED26E26498098001078EA /* Assets.xcassets */; };
 		B43ED27226498098001078EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43ED27126498098001078EA /* Preview Assets.xcassets */; };
 		B43ED27426498098001078EA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED27326498098001078EA /* Persistence.swift */; };
 		B43ED27726498098001078EA /* RanFact.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43ED27526498098001078EA /* RanFact.xcdatamodeld */; };
@@ -50,7 +49,6 @@
 		B43ED26726498096001078EA /* RanFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RanFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43ED26A26498096001078EA /* RanFactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanFactApp.swift; sourceTree = "<group>"; };
 		B43ED26C26498096001078EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B43ED26E26498098001078EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43ED27126498098001078EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B43ED27326498098001078EA /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B43ED27626498098001078EA /* RanFact.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RanFact.xcdatamodel; sourceTree = "<group>"; };
@@ -145,7 +143,6 @@
 			children = (
 				B43ED26A26498096001078EA /* RanFactApp.swift */,
 				B43ED26C26498096001078EA /* ContentView.swift */,
-				B43ED26E26498098001078EA /* Assets.xcassets */,
 				B43ED27326498098001078EA /* Persistence.swift */,
 				B43ED27826498098001078EA /* Info.plist */,
 				B43ED27526498098001078EA /* RanFact.xcdatamodeld */,
@@ -289,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B43ED27226498098001078EA /* Preview Assets.xcassets in Resources */,
-				B43ED26F26498098001078EA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
