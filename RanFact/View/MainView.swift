@@ -10,16 +10,17 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            ContentView()
+            RedView()
                 .tabItem {
-                    Label("Menu", systemImage: "list.dash")
+                    Label("Menu", systemImage: "hare.fill")
                 }
 
-            YearView()
+            BlueView()
                 .tabItem {
-                    Label("Order", systemImage: "square.and.pencil")
+                    Label("Order", systemImage: "tortoise.fill")
                 }
         }
+        .font(.headline)
     }
 }
 
