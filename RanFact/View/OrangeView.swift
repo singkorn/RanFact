@@ -9,26 +9,17 @@ import SwiftUI
 
 struct OrangeView: View {
     
-//    @State private var counter : Int = 0
+    @State var randomyearfact : RandomYearFact
     
     var body: some View {
         Color.orange
             .ignoresSafeArea(.all)
             .overlay(
                 VStack(alignment: .leading) {
-//                    Button(action: {
-//                        self.counter += 1
-//                    }) {
-//                        Text("Add")
-//                            .foregroundColor(.white)
-//                    }
-//                    .padding()
-//                    .background(Color.blue)
-//
-//                    Text("\(counter)")
-//                        .padding()
                     Button(action: {
-                        RandomFactViewModel().getJSON()
+                        RandomFactViewModel().getJSON { (randomyearfact) in
+                            self.randomyearfact = randomyearfact
+                        }
                     }) {
                         Text("get JSON")
                             .foregroundColor(.white)
@@ -36,13 +27,18 @@ struct OrangeView: View {
                     .padding()
                     .background(Color.blue)
                     
-                    Text("Hello")
+                    VStack {
+                        Text(randomyearfact.date)
+                        Text(randomyearfact.text)
+//                        Text(randomyearfact.found)
+//                        Text(randomyearfact.type)
+                    }
                 })
     }
 }
 
 struct OrangeView_Previews: PreviewProvider {
     static var previews: some View {
-        OrangeView()
+        OrangeView(randomyearfact: RandomYearFact.init(date: "", text: "", number: 0, found: false, type: ""))
     }
 }

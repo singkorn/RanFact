@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct RandomFactViewModel {
+class RandomFactViewModel {
     
-    func getJSON() {
+    func getJSON(completion: @escaping (RandomYearFact) -> ()) {
         
         let headers = [
             "x-rapidapi-key": "IJAsspsxlKoKWQcL0RinV8IyQxFmSg9M",
@@ -40,6 +40,9 @@ struct RandomFactViewModel {
                 let jsonDecoder = JSONDecoder()
                 if let randomFact = try jsonDecoder.decode(RandomYearFact?.self, from: data) {
                     DispatchQueue.main.async {
+                        
+                        completion(randomFact)
+                        
                         print("\n\n")
                         print("Date: \(randomFact.date)")
                         print("Text: \(randomFact.text)")
