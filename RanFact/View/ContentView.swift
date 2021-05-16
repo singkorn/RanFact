@@ -78,14 +78,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
-
-struct RedView: View {
-    var body: some View {
-        Color.red
-    }
-}
-struct BlueView: View {
-    var body: some View {
-        Color.blue
-    }
-}

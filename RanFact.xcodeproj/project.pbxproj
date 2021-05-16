@@ -12,6 +12,10 @@
 		8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */; };
 		B4348F8C264C33200081AE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4348F8B264C33200081AE00 /* Assets.xcassets */; };
 		B4348F8E264C395E0081AE00 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */; };
+		B4348F9126511C8B0081AE00 /* OrangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F9026511C8B0081AE00 /* OrangeView.swift */; };
+		B4348F9326511CE80081AE00 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F9226511CE80081AE00 /* BlueView.swift */; };
+		B4348F95265123DB0081AE00 /* RandomYearFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F94265123DB0081AE00 /* RandomYearFact.swift */; };
+		B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F962651242A0081AE00 /* RandomFactViewModel.swift */; };
 		B43ED26B26498096001078EA /* RanFactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26A26498096001078EA /* RanFactApp.swift */; };
 		B43ED26D26498096001078EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26C26498096001078EA /* ContentView.swift */; };
 		B43ED27226498098001078EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43ED27126498098001078EA /* Preview Assets.xcassets */; };
@@ -50,6 +54,10 @@
 		AF638395CC6EA1B364595957 /* Pods-RanFactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.release.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4348F8B264C33200081AE00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		B4348F9026511C8B0081AE00 /* OrangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeView.swift; sourceTree = "<group>"; };
+		B4348F9226511CE80081AE00 /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
+		B4348F94265123DB0081AE00 /* RandomYearFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomYearFact.swift; sourceTree = "<group>"; };
+		B4348F962651242A0081AE00 /* RandomFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactViewModel.swift; sourceTree = "<group>"; };
 		B43ED26726498096001078EA /* RanFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RanFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43ED26A26498096001078EA /* RanFactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanFactApp.swift; sourceTree = "<group>"; };
 		B43ED26C26498096001078EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -126,6 +134,8 @@
 				B43ED26C26498096001078EA /* ContentView.swift */,
 				B4CDF9E8264AD13400B7EA6B /* MainView.swift */,
 				B4CDF9EA264AD18B00B7EA6B /* YearView.swift */,
+				B4348F9026511C8B0081AE00 /* OrangeView.swift */,
+				B4348F9226511CE80081AE00 /* BlueView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,8 +144,18 @@
 			isa = PBXGroup;
 			children = (
 				B43ED27326498098001078EA /* Persistence.swift */,
+				B43ED27526498098001078EA /* RanFact.xcdatamodeld */,
+				B4348F94265123DB0081AE00 /* RandomYearFact.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B4348F8F265117F30081AE00 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4348F962651242A0081AE00 /* RandomFactViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		B43ED25E26498096001078EA = {
@@ -165,9 +185,9 @@
 			children = (
 				B43ED26A26498096001078EA /* RanFactApp.swift */,
 				B4348F89264C32AC0081AE00 /* View */,
+				B4348F8F265117F30081AE00 /* ViewModel */,
 				B4348F8A264C32B70081AE00 /* Model */,
 				B43ED27826498098001078EA /* Info.plist */,
-				B43ED27526498098001078EA /* RanFact.xcdatamodeld */,
 				B4348F8B264C33200081AE00 /* Assets.xcassets */,
 				B43ED27026498098001078EA /* Preview Content */,
 				B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */,
@@ -404,11 +424,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B43ED27426498098001078EA /* Persistence.swift in Sources */,
+				B4348F9126511C8B0081AE00 /* OrangeView.swift in Sources */,
 				B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */,
+				B4348F95265123DB0081AE00 /* RandomYearFact.swift in Sources */,
 				B43ED26D26498096001078EA /* ContentView.swift in Sources */,
+				B4348F9326511CE80081AE00 /* BlueView.swift in Sources */,
 				B43ED26B26498096001078EA /* RanFactApp.swift in Sources */,
 				B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */,
 				B43ED27726498098001078EA /* RanFact.xcdatamodeld in Sources */,
+				B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
