@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct BlueView: View {
+    
+    @State private var showShareSheet = false
+
     var body: some View {
-        Color.blue
+        Color.white
             .ignoresSafeArea(.all)
             .overlay(
                 VStack {
                     Text("Hello, Universe")
+                    Button(action: {
+                        self.showShareSheet = true
+                    }) {
+                        Text("Share Me")
+                            .bold()
+                            .foregroundColor(.blue)
+                    }
                 })
+            .sheet(isPresented: $showShareSheet) {
+                ShareSheet(activityItems: ["Hello World"])
+            }
     }
 }
 

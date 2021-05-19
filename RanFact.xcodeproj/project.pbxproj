@@ -25,6 +25,10 @@
 		B43ED28D26498098001078EA /* RanFactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED28C26498098001078EA /* RanFactUITests.swift */; };
 		B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9E8264AD13400B7EA6B /* MainView.swift */; };
 		B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9EA264AD18B00B7EA6B /* YearView.swift */; };
+		B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A126526620003E300E /* ShareSheet.swift */; };
+		B4FFB7A42652C71C003E300E /* RandomTRMFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A32652C71C003E300E /* RandomTRMFact.swift */; };
+		B4FFB7A62652C74C003E300E /* RandomDateFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A52652C74C003E300E /* RandomDateFact.swift */; };
+		B4FFB7A82653FCD2003E300E /* ApiRandomFactService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A72653FCD2003E300E /* ApiRandomFactService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		B43ED28E26498098001078EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4CDF9E8264AD13400B7EA6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B4CDF9EA264AD18B00B7EA6B /* YearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearView.swift; sourceTree = "<group>"; };
+		B4FFB7A126526620003E300E /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		B4FFB7A32652C71C003E300E /* RandomTRMFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTRMFact.swift; sourceTree = "<group>"; };
+		B4FFB7A52652C74C003E300E /* RandomDateFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDateFact.swift; sourceTree = "<group>"; };
+		B4FFB7A72653FCD2003E300E /* ApiRandomFactService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRandomFactService.swift; sourceTree = "<group>"; };
 		E48EF32670E02DE456F8587B /* Pods-RanFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFact.release.xcconfig"; path = "Target Support Files/Pods-RanFact/Pods-RanFact.release.xcconfig"; sourceTree = "<group>"; };
 		FBFAB8A6FF5FFC20AB269C9F /* Pods_RanFactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanFactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -146,6 +154,8 @@
 				B43ED27326498098001078EA /* Persistence.swift */,
 				B43ED27526498098001078EA /* RanFact.xcdatamodeld */,
 				B4348F94265123DB0081AE00 /* RandomYearFact.swift */,
+				B4FFB7A32652C71C003E300E /* RandomTRMFact.swift */,
+				B4FFB7A52652C74C003E300E /* RandomDateFact.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +194,8 @@
 			isa = PBXGroup;
 			children = (
 				B43ED26A26498096001078EA /* RanFactApp.swift */,
+				B4FFB7A0265265F6003E300E /* Helper */,
+				B4FFB79F265265DF003E300E /* Service */,
 				B4348F89264C32AC0081AE00 /* View */,
 				B4348F8F265117F30081AE00 /* ViewModel */,
 				B4348F8A264C32B70081AE00 /* Model */,
@@ -219,6 +231,22 @@
 				B43ED28E26498098001078EA /* Info.plist */,
 			);
 			path = RanFactUITests;
+			sourceTree = "<group>";
+		};
+		B4FFB79F265265DF003E300E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B4FFB7A72653FCD2003E300E /* ApiRandomFactService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B4FFB7A0265265F6003E300E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B4FFB7A126526620003E300E /* ShareSheet.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,16 +451,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4FFB7A42652C71C003E300E /* RandomTRMFact.swift in Sources */,
 				B43ED27426498098001078EA /* Persistence.swift in Sources */,
 				B4348F9126511C8B0081AE00 /* OrangeView.swift in Sources */,
 				B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */,
 				B4348F95265123DB0081AE00 /* RandomYearFact.swift in Sources */,
+				B4FFB7A62652C74C003E300E /* RandomDateFact.swift in Sources */,
 				B43ED26D26498096001078EA /* ContentView.swift in Sources */,
 				B4348F9326511CE80081AE00 /* BlueView.swift in Sources */,
 				B43ED26B26498096001078EA /* RanFactApp.swift in Sources */,
 				B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */,
 				B43ED27726498098001078EA /* RanFact.xcdatamodeld in Sources */,
+				B4FFB7A82653FCD2003E300E /* ApiRandomFactService.swift in Sources */,
 				B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */,
+				B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

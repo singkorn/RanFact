@@ -12,7 +12,7 @@ struct OrangeView: View {
     @State var randomyearfact : RandomYearFact
     
     var body: some View {
-        Color.orange
+        Color.white
             .ignoresSafeArea(.all)
             .overlay(
                 VStack(alignment: .leading) {
@@ -30,8 +30,9 @@ struct OrangeView: View {
                     VStack {
                         Text(randomyearfact.date)
                         Text(randomyearfact.text)
-//                        Text(randomyearfact.found)
-//                        Text(randomyearfact.type)
+                        Text(String(randomyearfact.number))
+                        Text(String(randomyearfact.found))
+                        Text(randomyearfact.type)
                     }
                 })
     }

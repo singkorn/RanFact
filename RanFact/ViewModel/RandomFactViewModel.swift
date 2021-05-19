@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RandomFactViewModel {
+struct RandomFactViewModel {
     
     func getJSON(completion: @escaping (RandomYearFact) -> ()) {
         
@@ -59,5 +59,4 @@ class RandomFactViewModel {
         
         dataTask.resume()
     }
-    
 }
