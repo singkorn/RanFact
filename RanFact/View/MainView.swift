@@ -19,7 +19,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Random Number", systemImage: "shuffle")
                 }
-            YearView()
+            SwiftUIViewMVVM()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
