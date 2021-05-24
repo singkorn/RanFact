@@ -14,7 +14,6 @@
 		B4348F8E264C395E0081AE00 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */; };
 		B4348F9126511C8B0081AE00 /* OrangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F9026511C8B0081AE00 /* OrangeView.swift */; };
 		B4348F9326511CE80081AE00 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F9226511CE80081AE00 /* BlueView.swift */; };
-		B4348F95265123DB0081AE00 /* RandomYearFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F94265123DB0081AE00 /* RandomYearFact.swift */; };
 		B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F962651242A0081AE00 /* RandomFactViewModel.swift */; };
 		B43ED26B26498096001078EA /* RanFactApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26A26498096001078EA /* RanFactApp.swift */; };
 		B43ED26D26498096001078EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED26C26498096001078EA /* ContentView.swift */; };
@@ -24,11 +23,10 @@
 		B43ED28226498098001078EA /* RanFactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED28126498098001078EA /* RanFactTests.swift */; };
 		B43ED28D26498098001078EA /* RanFactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED28C26498098001078EA /* RanFactUITests.swift */; };
 		B461BCE1265A1D7100E9514C /* SwiftUIViewMVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE0265A1D7100E9514C /* SwiftUIViewMVVM.swift */; };
+		B461BCE3265B85A400E9514C /* RandomFactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE2265B85A400E9514C /* RandomFactModel.swift */; };
 		B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9E8264AD13400B7EA6B /* MainView.swift */; };
 		B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9EA264AD18B00B7EA6B /* YearView.swift */; };
 		B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A126526620003E300E /* ShareSheet.swift */; };
-		B4FFB7A42652C71C003E300E /* RandomTRMFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A32652C71C003E300E /* RandomTRMFact.swift */; };
-		B4FFB7A62652C74C003E300E /* RandomDateFact.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A52652C74C003E300E /* RandomDateFact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,7 +58,6 @@
 		B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B4348F9026511C8B0081AE00 /* OrangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeView.swift; sourceTree = "<group>"; };
 		B4348F9226511CE80081AE00 /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
-		B4348F94265123DB0081AE00 /* RandomYearFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomYearFact.swift; sourceTree = "<group>"; };
 		B4348F962651242A0081AE00 /* RandomFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactViewModel.swift; sourceTree = "<group>"; };
 		B43ED26726498096001078EA /* RanFact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RanFact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43ED26A26498096001078EA /* RanFactApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanFactApp.swift; sourceTree = "<group>"; };
@@ -76,11 +73,10 @@
 		B43ED28C26498098001078EA /* RanFactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RanFactUITests.swift; sourceTree = "<group>"; };
 		B43ED28E26498098001078EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B461BCE0265A1D7100E9514C /* SwiftUIViewMVVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewMVVM.swift; sourceTree = "<group>"; };
+		B461BCE2265B85A400E9514C /* RandomFactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactModel.swift; sourceTree = "<group>"; };
 		B4CDF9E8264AD13400B7EA6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B4CDF9EA264AD18B00B7EA6B /* YearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearView.swift; sourceTree = "<group>"; };
 		B4FFB7A126526620003E300E /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
-		B4FFB7A32652C71C003E300E /* RandomTRMFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomTRMFact.swift; sourceTree = "<group>"; };
-		B4FFB7A52652C74C003E300E /* RandomDateFact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomDateFact.swift; sourceTree = "<group>"; };
 		E48EF32670E02DE456F8587B /* Pods-RanFact.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFact.release.xcconfig"; path = "Target Support Files/Pods-RanFact/Pods-RanFact.release.xcconfig"; sourceTree = "<group>"; };
 		FBFAB8A6FF5FFC20AB269C9F /* Pods_RanFactTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanFactTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -154,9 +150,7 @@
 			children = (
 				B43ED27326498098001078EA /* Persistence.swift */,
 				B43ED27526498098001078EA /* RanFact.xcdatamodeld */,
-				B4348F94265123DB0081AE00 /* RandomYearFact.swift */,
-				B4FFB7A32652C71C003E300E /* RandomTRMFact.swift */,
-				B4FFB7A52652C74C003E300E /* RandomDateFact.swift */,
+				B461BCE2265B85A400E9514C /* RandomFactModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -443,17 +437,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4FFB7A42652C71C003E300E /* RandomTRMFact.swift in Sources */,
 				B43ED27426498098001078EA /* Persistence.swift in Sources */,
 				B4348F9126511C8B0081AE00 /* OrangeView.swift in Sources */,
 				B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */,
-				B4348F95265123DB0081AE00 /* RandomYearFact.swift in Sources */,
-				B4FFB7A62652C74C003E300E /* RandomDateFact.swift in Sources */,
 				B43ED26D26498096001078EA /* ContentView.swift in Sources */,
 				B4348F9326511CE80081AE00 /* BlueView.swift in Sources */,
 				B43ED26B26498096001078EA /* RanFactApp.swift in Sources */,
 				B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */,
 				B43ED27726498098001078EA /* RanFact.xcdatamodeld in Sources */,
+				B461BCE3265B85A400E9514C /* RandomFactModel.swift in Sources */,
 				B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */,
 				B461BCE1265A1D7100E9514C /* SwiftUIViewMVVM.swift in Sources */,
 				B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */,

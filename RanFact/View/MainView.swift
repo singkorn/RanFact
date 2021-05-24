@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            OrangeView(randomyearfact: RandomYearFact.init(date: "", text: "", number: 0, found: false, type: ""))
+            OrangeView()
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }

@@ -34,15 +34,7 @@ class SwiftUIViewMVVMViewModel: ObservableObject {
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error)
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
-            }
-            
+        URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             guard let data = data else {
                 print("URLSession dataTask error:", error ?? "nil")
                 return
@@ -58,7 +50,6 @@ class SwiftUIViewMVVMViewModel: ObservableObject {
             } catch {
                 print("JSONSerialization error:", error)
             }
-            
         }).resume()
     }
 }

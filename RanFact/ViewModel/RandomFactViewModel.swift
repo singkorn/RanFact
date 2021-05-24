@@ -7,9 +7,11 @@
 
 import Foundation
 
-class RandomFactViewModel {
+class RandomFactViewModel: ObservableObject {
     
-    func getJSON(completion: @escaping (RandomYearFact) -> ()) {
+    @Published var randomFactItem = RandomFactModel()
+    
+    func fetchData() {
         
         let headers = [
             "x-rapidapi-key": "IJAsspsxlKoKWQcL0RinV8IyQxFmSg9M",
@@ -22,15 +24,7 @@ class RandomFactViewModel {
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
-        let session = URLSession.shared
-        let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-            if (error != nil) {
-                print(error)
-            } else {
-                let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
-            }
-            
+        URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
             guard let data = data else {
                 print("URLSession dataTask error:", error ?? "nil")
                 return
@@ -38,25 +32,14 @@ class RandomFactViewModel {
             
             do {
                 let jsonDecoder = JSONDecoder()
-                if let randomFact = try jsonDecoder.decode(RandomYearFact?.self, from: data) {
+                if let randomFactItem = try jsonDecoder.decode(RandomFactModel?.self, from: data) {
                     DispatchQueue.main.async {
-                        
-                        completion(randomFact)
-                        
-                        print("\n\n")
-                        print("Date: \(randomFact.date)")
-                        print("Text: \(randomFact.text)")
-                        print("Number: \(randomFact.number)")
-                        print("Found: \(randomFact.found)")
-                        print("Type: \(randomFact.type)")
+                        self.randomFactItem = randomFactItem
                     }
                 }
             } catch {
                 print("JSONSerialization error:", error)
             }
-            
-        })
-        
-        dataTask.resume()
+        }).resume()
     }
 }

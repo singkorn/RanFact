@@ -9,37 +9,31 @@ import SwiftUI
 
 struct OrangeView: View {
     
-    @State var randomyearfact : RandomYearFact
-    
+    @ObservedObject var viewModel = SwiftUIViewMVVMViewModel()
+
     var body: some View {
-        Color.white
-            .ignoresSafeArea(.all)
-            .overlay(
+        VStack {
                 VStack(alignment: .leading) {
-                    Button(action: {
-                        RandomFactViewModel().getJSON { (randomyearfact) in
-                            self.randomyearfact = randomyearfact
-                        }
-                    }) {
-                        Text("get JSON")
-                            .foregroundColor(.white)
-                    }
-                    .padding()
-                    .background(Color.blue)
-                    
-                    VStack {
-                        Text(randomyearfact.date)
-                        Text(randomyearfact.text)
-                        Text(String(randomyearfact.number))
-                        Text(String(randomyearfact.found))
-                        Text(randomyearfact.type)
-                    }
-                })
+                    Text(viewModel.randomFactItem.date ?? "Date Unknown")
+                    Text(viewModel.randomFactItem.text ?? "default text")
+                    Text(String(viewModel.randomFactItem.number ?? 0))
+                    Text(String(viewModel.randomFactItem.found ?? true))
+                    Text(viewModel.randomFactItem.type ?? "default type")
+
+                    Print(viewModel.randomFactItem.date ?? "Date Unknown")
+                    Print(viewModel.randomFactItem.text ?? "default text")
+                    Print(String(viewModel.randomFactItem.number ?? 0))
+                    Print(String(viewModel.randomFactItem.found ?? true))
+                    Print(viewModel.randomFactItem.type ?? "default type")
+                }
+            }.onAppear(perform: {
+            viewModel.fetchData()
+        })
     }
 }
 
 struct OrangeView_Previews: PreviewProvider {
     static var previews: some View {
-        OrangeView(randomyearfact: RandomYearFact.init(date: "", text: "", number: 0, found: false, type: ""))
+        OrangeView()
     }
 }
