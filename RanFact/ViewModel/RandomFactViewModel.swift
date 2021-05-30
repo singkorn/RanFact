@@ -11,14 +11,14 @@ class RandomFactViewModel: ObservableObject {
     
     @Published var randomFactItem = RandomFactModel()
     
-    func fetchData() {
+    func fetchData(selectedRandomNumber: String = "1492", selectedRandomType: String = "year") {
         
         let headers = [
             "x-rapidapi-key": "IJAsspsxlKoKWQcL0RinV8IyQxFmSg9M",
             "x-rapidapi-host": "numbersapi.p.rapidapi.com"
         ]
-
-        let finalURL = API.EndPoint.year.url.appendingPathComponent("1492/year")
+        
+        let finalURL = API.EndPoint.year.url.appendingPathComponent("\(selectedRandomNumber)/\(selectedRandomType)")
         
         let request = NSMutableURLRequest(url: finalURL as URL,
                                           cachePolicy: .useProtocolCachePolicy,

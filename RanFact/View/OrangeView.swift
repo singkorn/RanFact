@@ -70,7 +70,7 @@ struct OrangeView: View {
                     print("Button Pressed...")
                     print("Typed Text: \(name)")
                     print("Selected Random Type: \(selectedRandomType)")
-                    viewModel.fetchData()
+                    viewModel.fetchData(selectedRandomNumber: name, selectedRandomType: selectedRandomType)
                 }.padding()
             }
         }.onAppear(perform: {
