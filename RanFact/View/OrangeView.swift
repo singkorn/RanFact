@@ -10,59 +10,87 @@ import SwiftUI
 struct OrangeView: View {
     
     @ObservedObject var viewModel = RandomFactViewModel()
-    @State private var name: String = "Tim"
+    @State private var name: String = ""
     @State private var selectorIndex = 0
-    @State private var numbers = ["1", "2", "3"]
+    @State private var selectedRandomType = "year"
+    var randomTypes = ["year", "trivia", "random", "math", "date"]
     
     var body: some View {
         
         VStack {
-            VStack(alignment: .leading) {
-                TextField("Enter your name", text: $name)
-                Text("Hello, \(name)!")
-            }
-            Picker("Numbers", selection: $selectorIndex) {
-                ForEach(0..<numbers.count) { index in
-                    Text(self.numbers[index]).tag(index)
+            
+            VStack(alignment: .center) {
+                TextField("Enter text...", text: $name, onEditingChanged: { (changed) in
+                    print("Username onEditingChanged - \(changed)")
+                }) {
+                    print("Username onCommit")
+                }.onTapGesture {
+                    self.endEditing()
                 }
+                
+                Text("You typed: \(name)")
+            }.padding()
+//            Picker("Random Types", selection: $selectorIndex) {
+//                ForEach(0..<randomTypes.count) { index in
+//                    Text(self.randomTypes[index]).tag(index)
+//                }
+//            }
+//            .pickerStyle(WheelPickerStyle())
+//            .padding()
+//            Print("You selected: \(selectorIndex)")
+            VStack {
+                Picker("Random Types", selection: $selectedRandomType) {
+                    ForEach(randomTypes, id: \.self) {
+                        Text($0)
+                    }
+                }
+                Text("Selected Random Type: \(selectedRandomType)")
             }
             .pickerStyle(WheelPickerStyle())
             .padding()
-            Label("Your account", systemImage: "person.crop.circle")
-            Label("Welcome to the app", image: "star")                .labelStyle(TitleOnlyLabelStyle())
-            VStack {
-                Label("Text Only", systemImage: "heart")
-                    .font(.title)
-                    .labelStyle(TitleOnlyLabelStyle())
-                
-                Label("Icon Only", systemImage: "star")
-                    .font(.title)
-                    .labelStyle(IconOnlyLabelStyle())
-                
-                Label("Both", systemImage: "paperplane")
-                    .font(.title)
-            }
+            
             VStack(alignment: .leading) {
-                Text(viewModel.randomFactItem.date ?? "Date Unknown")
-                Text(viewModel.randomFactItem.text ?? "default text")
-                Text(String(viewModel.randomFactItem.number ?? 0))
-                Text(String(viewModel.randomFactItem.found ?? true))
-                Text(viewModel.randomFactItem.type ?? "default type")
-                
+                Group {
+                    Text(viewModel.randomFactItem.date ?? "Date Unknown")
+                    Text(viewModel.randomFactItem.text ?? "Text Unknown")
+                    Text(String(viewModel.randomFactItem.year ?? 0))
+                    Text(String(viewModel.randomFactItem.number ?? 0))
+                    Text(String(viewModel.randomFactItem.found ?? false))
+                    Text(viewModel.randomFactItem.type ?? "Type Unknown")
+                }
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
-                Print(viewModel.randomFactItem.text ?? "default text")
+                Print(viewModel.randomFactItem.text ?? "Text Unknown")
+                Print(String(viewModel.randomFactItem.year ?? 0))
                 Print(String(viewModel.randomFactItem.number ?? 0))
-                Print(String(viewModel.randomFactItem.found ?? true))
-                Print(viewModel.randomFactItem.type ?? "default type")
+                Print(String(viewModel.randomFactItem.found ?? false))
+                Print(viewModel.randomFactItem.type ?? "Type Unknown")
+            }
+            VStack {
+                Button("OK") {
+                    print("Button Pressed...")
+                    print("Typed Text: \(name)")
+                    print("Selected Random Type: \(selectedRandomType)")
+                    viewModel.fetchData()
+                }.padding()
             }
         }.onAppear(perform: {
             viewModel.fetchData()
         })
+    }
+    
+    private func endEditing() {
+        UIApplication.shared.endEditing()
     }
 }
 
 struct OrangeView_Previews: PreviewProvider {
     static var previews: some View {
         OrangeView()
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

@@ -36,11 +36,9 @@ struct API {
         var url: URL {
             switch self {
             case .year:
-                let finalURL = EndPoint.baseURL
-                    .appending("json", value: "true")
-                    .appending("fragment", value: "true")
-                return finalURL.appendingPathComponent("1492/year")
-//                return EndPoint.baseURL.appendingPathComponent("1492/year?json=true&fragment=true")
+                return EndPoint.baseURL
+                                .appending("json", value: "true")
+                                .appending("fragment", value: "true")
             case .trivia:
                 return EndPoint.baseURL.appendingPathComponent("42/trivia?json=true&notfound=floor&fragment=true")
             case .random:

@@ -18,7 +18,9 @@ class RandomFactViewModel: ObservableObject {
             "x-rapidapi-host": "numbersapi.p.rapidapi.com"
         ]
 
-        let request = NSMutableURLRequest(url: API.EndPoint.year.url as URL,
+        let finalURL = API.EndPoint.year.url.appendingPathComponent("1492/year")
+        
+        let request = NSMutableURLRequest(url: finalURL as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         
