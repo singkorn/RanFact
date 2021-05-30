@@ -17,10 +17,11 @@ class RandomFactViewModel: ObservableObject {
             "x-rapidapi-key": "IJAsspsxlKoKWQcL0RinV8IyQxFmSg9M",
             "x-rapidapi-host": "numbersapi.p.rapidapi.com"
         ]
-        
-        let request = NSMutableURLRequest(url: NSURL(string: "https://numbersapi.p.rapidapi.com/1492/year?json=true&fragment=true")! as URL,
+
+        let request = NSMutableURLRequest(url: API.EndPoint.year.url as URL,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
+        
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
         
