@@ -41,25 +41,21 @@ struct API {
                     .appending("fragment", value: "true")
             case .trivia:
                 return EndPoint.baseURL
-                    //                    .appendingPathComponent("42/trivia?json=true&notfound=floor&fragment=true")
                     .appending("json", value: "true")
                     .appending("notfound", value: "floor")
                     .appending("fragment", value: "true")
             case .random:
                 return EndPoint.baseURL
-                    //                    .appendingPathComponent("random/trivia?json=true&fragment=true&max=20&min=10")
                     .appending("json", value: "true")
                     .appending("fragment", value: "true")
                     .appending("max", value: "20")
                     .appending("min", value: "10")
             case .math:
                 return EndPoint.baseURL
-                    //                    .appendingPathComponent("1729/math?json=true&fragment=true")
                     .appending("json", value: "true")
                     .appending("fragment", value: "true")
             case .date:
                 return EndPoint.baseURL
-                    //                    .appendingPathComponent("6/21/date?json=true&fragment=true")
                     .appending("json", value: "true")
                     .appending("fragment", value: "true")
             }

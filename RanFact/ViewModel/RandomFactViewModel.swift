@@ -17,8 +17,25 @@ class RandomFactViewModel: ObservableObject {
             "x-rapidapi-key": "IJAsspsxlKoKWQcL0RinV8IyQxFmSg9M",
             "x-rapidapi-host": "numbersapi.p.rapidapi.com"
         ]
+                
+        var finalURL: URL {
+            switch selectedRandomType {
+            case "year":
+                return API.EndPoint.year.url.appendingPathComponent("\(selectedRandomNumber)/\(selectedRandomType)")
+            case "trivia":
+                return API.EndPoint.trivia.url.appendingPathComponent("\(selectedRandomNumber)/\(selectedRandomType)")
+            case "random":
+                return API.EndPoint.random.url.appendingPathComponent("\(selectedRandomType)/trivia")
+            case "math":
+                return API.EndPoint.math.url.appendingPathComponent("\(selectedRandomNumber)/\(selectedRandomType)")
+            case "date":
+                return API.EndPoint.date.url.appendingPathComponent("\(selectedRandomNumber)/\(selectedRandomType)")
+            default:
+                return API.EndPoint.random.url.appendingPathComponent("\(selectedRandomType)/trivia")
+            }
+        }
         
-        let finalURL = API.EndPoint.year.url.appendingPathComponent("\(selectedRandomNumber)/\(selectedRandomType)")
+        print("Final URL: \(finalURL)")
         
         let request = NSMutableURLRequest(url: finalURL as URL,
                                           cachePolicy: .useProtocolCachePolicy,

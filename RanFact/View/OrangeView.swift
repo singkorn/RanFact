@@ -30,14 +30,7 @@ struct OrangeView: View {
                 
                 Text("You typed: \(name)")
             }.padding()
-//            Picker("Random Types", selection: $selectorIndex) {
-//                ForEach(0..<randomTypes.count) { index in
-//                    Text(self.randomTypes[index]).tag(index)
-//                }
-//            }
-//            .pickerStyle(WheelPickerStyle())
-//            .padding()
-//            Print("You selected: \(selectorIndex)")
+
             VStack {
                 Picker("Random Types", selection: $selectedRandomType) {
                     ForEach(randomTypes, id: \.self) {
@@ -65,6 +58,7 @@ struct OrangeView: View {
                 Print(String(viewModel.randomFactItem.found ?? false))
                 Print(viewModel.randomFactItem.type ?? "Type Unknown")
             }
+            
             VStack {
                 Button("OK") {
                     print("Button Pressed...")
@@ -92,5 +86,12 @@ struct OrangeView_Previews: PreviewProvider {
 extension UIApplication {
     func endEditing() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+extension View {
+    func Print(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
     }
 }
