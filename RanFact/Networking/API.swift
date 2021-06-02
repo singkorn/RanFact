@@ -48,8 +48,8 @@ struct API {
                 return EndPoint.baseURL
                     .appending("json", value: "true")
                     .appending("fragment", value: "true")
-                    .appending("max", value: "20")
-                    .appending("min", value: "10")
+                    .appending("max", value: "999999999")
+                    .appending("min", value: "1")
             case .math:
                 return EndPoint.baseURL
                     .appending("json", value: "true")

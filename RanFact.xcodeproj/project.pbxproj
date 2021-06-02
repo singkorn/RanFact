@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,9 @@
 		B43ED28D26498098001078EA /* RanFactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43ED28C26498098001078EA /* RanFactUITests.swift */; };
 		B461BCE3265B85A400E9514C /* RandomFactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE2265B85A400E9514C /* RandomFactModel.swift */; };
 		B461BCE6265C022700E9514C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE5265C022700E9514C /* API.swift */; };
+		B4A145F22666A6950014A8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */; };
+		B4A145F32666A6950014A8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */; };
+		B4BBAAC42666951E00E42F74 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B4BBAAC32666951E00E42F74 /* FirebaseMessaging */; };
 		B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9E8264AD13400B7EA6B /* MainView.swift */; };
 		B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9EA264AD18B00B7EA6B /* YearView.swift */; };
 		B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FFB7A126526620003E300E /* ShareSheet.swift */; };
@@ -74,6 +77,8 @@
 		B43ED28E26498098001078EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B461BCE2265B85A400E9514C /* RandomFactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactModel.swift; sourceTree = "<group>"; };
 		B461BCE5265C022700E9514C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B4BBAAC126668D9F00E42F74 /* RanFact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RanFact.entitlements; sourceTree = "<group>"; };
 		B4CDF9E8264AD13400B7EA6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B4CDF9EA264AD18B00B7EA6B /* YearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearView.swift; sourceTree = "<group>"; };
 		B4FFB7A126526620003E300E /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4BBAAC42666951E00E42F74 /* FirebaseMessaging in Frameworks */,
 				8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +193,7 @@
 		B43ED26926498096001078EA /* RanFact */ = {
 			isa = PBXGroup;
 			children = (
+				B4BBAAC126668D9F00E42F74 /* RanFact.entitlements */,
 				B43ED26A26498096001078EA /* RanFactApp.swift */,
 				B461BCE4265C020C00E9514C /* Networking */,
 				B4FFB7A0265265F6003E300E /* Helper */,
@@ -195,6 +202,7 @@
 				B4348F8A264C32B70081AE00 /* Model */,
 				B43ED27826498098001078EA /* Info.plist */,
 				B4348F8B264C33200081AE00 /* Assets.xcassets */,
+				B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */,
 				B43ED27026498098001078EA /* Preview Content */,
 				B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */,
 			);
@@ -260,6 +268,9 @@
 			dependencies = (
 			);
 			name = RanFact;
+			packageProductDependencies = (
+				B4BBAAC32666951E00E42F74 /* FirebaseMessaging */,
+			);
 			productName = RanFact;
 			productReference = B43ED26726498096001078EA /* RanFact.app */;
 			productType = "com.apple.product-type.application";
@@ -333,6 +344,9 @@
 				Base,
 			);
 			mainGroup = B43ED25E26498096001078EA;
+			packageReferences = (
+				B4BBAAC22666951E00E42F74 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B43ED26826498096001078EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B4348F8E264C395E0081AE00 /* Launch Screen.storyboard in Resources */,
+				B4A145F22666A6950014A8F0 /* GoogleService-Info.plist in Resources */,
 				B4348F8C264C33200081AE00 /* Assets.xcassets in Resources */,
 				B43ED27226498098001078EA /* Preview Assets.xcassets in Resources */,
 			);
@@ -359,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4A145F32666A6950014A8F0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +630,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RanFact/RanFact.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RanFact/Preview Content\"";
 				DEVELOPMENT_TEAM = 6H7H99VYLE;
@@ -637,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = RanFact/RanFact.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"RanFact/Preview Content\"";
 				DEVELOPMENT_TEAM = 6H7H99VYLE;
@@ -782,6 +800,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B4BBAAC22666951E00E42F74 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B4BBAAC32666951E00E42F74 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4BBAAC22666951E00E42F74 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B43ED27526498098001078EA /* RanFact.xcdatamodeld */ = {
