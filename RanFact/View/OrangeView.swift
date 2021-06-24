@@ -13,6 +13,7 @@ struct OrangeView: View {
     @State private var name: String = ""
     @State private var selectorIndex = 0
     @State private var selectedRandomType = "year"
+    
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
     var body: some View {
@@ -29,7 +30,12 @@ struct OrangeView: View {
                 }
                 
                 Text("You typed: \(name)")
-            }.padding()
+            }
+            .padding()
+            .foregroundColor(Color.white)
+            .background(Color.green)
+            .cornerRadius(8.0)
+            
 
             VStack {
                 Picker("Random Types", selection: $selectedRandomType) {
@@ -41,6 +47,9 @@ struct OrangeView: View {
             }
             .pickerStyle(WheelPickerStyle())
             .padding()
+            .foregroundColor(Color.white)
+            .background(Color.orange)
+            .cornerRadius(8.0)
             
             VStack(alignment: .leading) {
                 Group {
@@ -58,14 +67,28 @@ struct OrangeView: View {
                 Print(String(viewModel.randomFactItem.found ?? false))
                 Print(viewModel.randomFactItem.type ?? "Type Unknown")
             }
+            .padding()
+            .foregroundColor(Color.white)
+            .background(Color.blue)
+            .cornerRadius(8.0)
             
             VStack {
-                Button("OK") {
+                Button(action: {
                     print("Button Pressed...")
                     print("Typed Text: \(name)")
                     print("Selected Random Type: \(selectedRandomType)")
                     viewModel.fetchData(selectedRandomNumber: name, selectedRandomType: selectedRandomType)
-                }.padding()
+                }) {
+                    HStack {
+                        Image(systemName: "magnifyingglass.circle.fill")
+                        Text("Search")
+                            .padding(.horizontal)
+                    }
+                }
+                .padding()
+                .foregroundColor(Color.white)
+                .background(Color.purple)
+                .cornerRadius(8.0)
             }
         }.onAppear(perform: {
             viewModel.fetchData()

@@ -14,10 +14,13 @@ struct MainView: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
-
             BlueView()
                 .tabItem {
                     Label("Random Number", systemImage: "shuffle")
+                }
+            AnimateCardsView()
+                .tabItem {
+                    Label("Cards", systemImage: "greetingcard.fill")
                 }
             YearView()
                 .tabItem {

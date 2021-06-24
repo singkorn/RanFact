@@ -11,7 +11,6 @@
 		40F263E889760F7A55851AB1 /* Pods_RanFact_RanFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4006EE66664F3C792342F948 /* Pods_RanFact_RanFactUITests.framework */; };
 		8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */; };
 		B4348F8C264C33200081AE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4348F8B264C33200081AE00 /* Assets.xcassets */; };
-		B4348F8E264C395E0081AE00 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */; };
 		B4348F9126511C8B0081AE00 /* OrangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F9026511C8B0081AE00 /* OrangeView.swift */; };
 		B4348F9326511CE80081AE00 /* BlueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F9226511CE80081AE00 /* BlueView.swift */; };
 		B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4348F962651242A0081AE00 /* RandomFactViewModel.swift */; };
@@ -26,6 +25,7 @@
 		B461BCE6265C022700E9514C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE5265C022700E9514C /* API.swift */; };
 		B4A145F22666A6950014A8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */; };
 		B4A145F32666A6950014A8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */; };
+		B4A145F5266D1ACF0014A8F0 /* AnimateCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A145F4266D1ACF0014A8F0 /* AnimateCardsView.swift */; };
 		B4BBAAC42666951E00E42F74 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B4BBAAC32666951E00E42F74 /* FirebaseMessaging */; };
 		B4CDF9E9264AD13400B7EA6B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9E8264AD13400B7EA6B /* MainView.swift */; };
 		B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4CDF9EA264AD18B00B7EA6B /* YearView.swift */; };
@@ -58,7 +58,6 @@
 		5C4BE11DC2CC86C6EC0E7D66 /* Pods-RanFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.debug.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF638395CC6EA1B364595957 /* Pods-RanFactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.release.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.release.xcconfig"; sourceTree = "<group>"; };
 		B4348F8B264C33200081AE00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		B4348F9026511C8B0081AE00 /* OrangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeView.swift; sourceTree = "<group>"; };
 		B4348F9226511CE80081AE00 /* BlueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueView.swift; sourceTree = "<group>"; };
 		B4348F962651242A0081AE00 /* RandomFactViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactViewModel.swift; sourceTree = "<group>"; };
@@ -78,6 +77,7 @@
 		B461BCE2265B85A400E9514C /* RandomFactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactModel.swift; sourceTree = "<group>"; };
 		B461BCE5265C022700E9514C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B4A145F4266D1ACF0014A8F0 /* AnimateCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateCardsView.swift; sourceTree = "<group>"; };
 		B4BBAAC126668D9F00E42F74 /* RanFact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RanFact.entitlements; sourceTree = "<group>"; };
 		B4CDF9E8264AD13400B7EA6B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B4CDF9EA264AD18B00B7EA6B /* YearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearView.swift; sourceTree = "<group>"; };
@@ -146,6 +146,7 @@
 				B4CDF9EA264AD18B00B7EA6B /* YearView.swift */,
 				B4348F9026511C8B0081AE00 /* OrangeView.swift */,
 				B4348F9226511CE80081AE00 /* BlueView.swift */,
+				B4A145F4266D1ACF0014A8F0 /* AnimateCardsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -204,7 +205,6 @@
 				B4348F8B264C33200081AE00 /* Assets.xcassets */,
 				B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */,
 				B43ED27026498098001078EA /* Preview Content */,
-				B4348F8D264C395E0081AE00 /* Launch Screen.storyboard */,
 			);
 			path = RanFact;
 			sourceTree = "<group>";
@@ -363,7 +363,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4348F8E264C395E0081AE00 /* Launch Screen.storyboard in Resources */,
 				B4A145F22666A6950014A8F0 /* GoogleService-Info.plist in Resources */,
 				B4348F8C264C33200081AE00 /* Assets.xcassets in Resources */,
 				B43ED27226498098001078EA /* Preview Assets.xcassets in Resources */,
@@ -473,6 +472,7 @@
 				B461BCE3265B85A400E9514C /* RandomFactModel.swift in Sources */,
 				B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */,
 				B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */,
+				B4A145F5266D1ACF0014A8F0 /* AnimateCardsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
