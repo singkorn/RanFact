@@ -1,18 +1,18 @@
 //
-//  YearView.swift
+//  TriviaView.swift
 //  RanFact
 //
-//  Created by Singkorn Dhepyasuvan on 11/5/2564 BE.
+//  Created by Singkorn Dhepyasuvan on 27/6/2564 BE.
 //
 
 import SwiftUI
 
-struct YearView: View {
+struct TriviaView: View {
     
     @ObservedObject var viewModel = RandomFactViewModel()
     @State private var name: String = ""
     @State private var selectorIndex = 0
-    @State private var selectedRandomType = "year"
+    @State private var selectedRandomType = "trivia"
     
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
@@ -100,8 +100,8 @@ struct YearView: View {
     }
 }
 
-struct YearView_Previews: PreviewProvider {
+struct TriviaView_Previews: PreviewProvider {
     static var previews: some View {
-        YearView()
+       TriviaView()
     }
 }

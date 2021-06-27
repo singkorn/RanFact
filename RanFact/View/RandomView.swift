@@ -1,18 +1,18 @@
 //
-//  YearView.swift
+//  RandomView.swift
 //  RanFact
 //
-//  Created by Singkorn Dhepyasuvan on 11/5/2564 BE.
+//  Created by Singkorn Dhepyasuvan on 16/5/2564 BE.
 //
 
 import SwiftUI
 
-struct YearView: View {
+struct RandomView: View {
     
     @ObservedObject var viewModel = RandomFactViewModel()
     @State private var name: String = ""
     @State private var selectorIndex = 0
-    @State private var selectedRandomType = "year"
+    @State private var selectedRandomType = "random"
     
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
@@ -100,8 +100,21 @@ struct YearView: View {
     }
 }
 
-struct YearView_Previews: PreviewProvider {
+struct OrangeView_Previews: PreviewProvider {
     static var previews: some View {
-        YearView()
+        RandomView()
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+}
+
+extension View {
+    func Print(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
     }
 }

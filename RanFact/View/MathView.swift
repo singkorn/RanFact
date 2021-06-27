@@ -1,5 +1,5 @@
 //
-//  OrangeView.swift
+//  MathView.swift
 //  RanFact
 //
 //  Created by Singkorn Dhepyasuvan on 16/5/2564 BE.
@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct OrangeView: View {
+struct MathView: View {
     
     @ObservedObject var viewModel = RandomFactViewModel()
     @State private var name: String = ""
     @State private var selectorIndex = 0
-    @State private var selectedRandomType = "year"
+    @State private var selectedRandomType = "math"
     
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
@@ -100,21 +100,9 @@ struct OrangeView: View {
     }
 }
 
-struct OrangeView_Previews: PreviewProvider {
+struct MathView_Previews: PreviewProvider {
     static var previews: some View {
-        OrangeView()
+        MathView()
     }
 }
 
-extension UIApplication {
-    func endEditing() {
-        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
-
-extension View {
-    func Print(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
-}

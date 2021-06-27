@@ -10,21 +10,25 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         TabView {
-            OrangeView()
+            YearView()
                 .tabItem {
-                    Label("Home", systemImage: "house.fill")
+                    Label("Year", systemImage: "calendar")
                 }
-            BlueView()
+            TriviaView()
+                .tabItem {
+                    Label("Trivia", systemImage: "questionmark.circle")
+                }
+            RandomView()
                 .tabItem {
                     Label("Random Number", systemImage: "shuffle")
                 }
-            AnimateCardsView()
+           MathView()
                 .tabItem {
-                    Label("Cards", systemImage: "greetingcard.fill")
+                    Label("Math", systemImage: "number.square")
                 }
-            YearView()
+            DateView()
                 .tabItem {
-                    Label("Settings", systemImage: "gearshape.fill")
+                    Label("Date", systemImage: "calendar.circle")
                 }
         }
         .font(.headline)
