@@ -37,19 +37,19 @@ struct RandomView: View {
             .cornerRadius(8.0)
             
 
-            VStack {
-                Picker("Random Types", selection: $selectedRandomType) {
-                    ForEach(randomTypes, id: \.self) {
-                        Text($0)
-                    }
-                }
-                Text("Selected Random Type: \(selectedRandomType)")
-            }
-            .pickerStyle(WheelPickerStyle())
-            .padding()
-            .foregroundColor(Color.white)
-            .background(Color.orange)
-            .cornerRadius(8.0)
+//            VStack {
+//                Picker("Random Types", selection: $selectedRandomType) {
+//                    ForEach(randomTypes, id: \.self) {
+//                        Text($0)
+//                    }
+//                }
+//                Text("Selected Random Type: \(selectedRandomType)")
+//            }
+//            .pickerStyle(WheelPickerStyle())
+//            .padding()
+//            .foregroundColor(Color.white)
+//            .background(Color.orange)
+//            .cornerRadius(8.0)
             
             VStack(alignment: .leading) {
                 Group {
