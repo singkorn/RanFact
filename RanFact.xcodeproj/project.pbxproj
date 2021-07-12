@@ -10,6 +10,7 @@
 		05C91FD639D32FF4A171E683 /* Pods_RanFactTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBFAB8A6FF5FFC20AB269C9F /* Pods_RanFactTests.framework */; };
 		40F263E889760F7A55851AB1 /* Pods_RanFact_RanFactUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4006EE66664F3C792342F948 /* Pods_RanFact_RanFactUITests.framework */; };
 		8C793819B91022410E064A66 /* Pods_RanFact.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */; };
+		B418782D269C23CF00F23E22 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B418782C269C23CF00F23E22 /* CardView.swift */; };
 		B4252A242688DA1E00D2D426 /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4252A232688DA1E00D2D426 /* TriviaView.swift */; };
 		B4252A262688DEF100D2D426 /* DateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4252A252688DEF100D2D426 /* DateView.swift */; };
 		B4348F8C264C33200081AE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4348F8B264C33200081AE00 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		4CE9D09A45C4A7213722929C /* Pods_RanFact.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RanFact.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C4BE11DC2CC86C6EC0E7D66 /* Pods-RanFactTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.debug.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF638395CC6EA1B364595957 /* Pods-RanFactTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RanFactTests.release.xcconfig"; path = "Target Support Files/Pods-RanFactTests/Pods-RanFactTests.release.xcconfig"; sourceTree = "<group>"; };
+		B418782C269C23CF00F23E22 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B4252A232688DA1E00D2D426 /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
 		B4252A252688DEF100D2D426 /* DateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateView.swift; sourceTree = "<group>"; };
 		B4348F8B264C33200081AE00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				B4348F9226511CE80081AE00 /* MathView.swift */,
 				B4252A232688DA1E00D2D426 /* TriviaView.swift */,
 				B4252A252688DEF100D2D426 /* DateView.swift */,
+				B418782C269C23CF00F23E22 /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				B4348F9126511C8B0081AE00 /* RandomView.swift in Sources */,
 				B4252A262688DEF100D2D426 /* DateView.swift in Sources */,
 				B4CDF9EB264AD18B00B7EA6B /* YearView.swift in Sources */,
+				B418782D269C23CF00F23E22 /* CardView.swift in Sources */,
 				B4252A242688DA1E00D2D426 /* TriviaView.swift in Sources */,
 				B43ED26D26498096001078EA /* ContentView.swift in Sources */,
 				B4348F9326511CE80081AE00 /* MathView.swift in Sources */,
