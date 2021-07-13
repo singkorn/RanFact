@@ -152,7 +152,6 @@
 				B4348F9226511CE80081AE00 /* MathView.swift */,
 				B4252A232688DA1E00D2D426 /* TriviaView.swift */,
 				B4252A252688DEF100D2D426 /* DateView.swift */,
-				B418782C269C23CF00F23E22 /* CardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				B4FFB7A126526620003E300E /* ShareSheet.swift */,
+				B418782C269C23CF00F23E22 /* CardView.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";

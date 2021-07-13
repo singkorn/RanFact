@@ -19,7 +19,7 @@ struct DateView: View {
     var body: some View {
         
         VStack {
-            
+                        
             Spacer()
                 .frame(height: 200)
 
@@ -36,12 +36,7 @@ struct DateView: View {
                 
                 Text("You typed: \(name)")
             }
-            .padding()
-            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 50, maxHeight: 100, alignment: .topLeading)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.green, Color.yellow]), startPoint: .topLeading, endPoint: .bottomTrailing))
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
-            .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
+            .inputResult()
                         
             VStack(alignment: .leading) {
                 Group {
@@ -59,11 +54,7 @@ struct DateView: View {
                 Print(String(viewModel.randomFactItem.found ?? false))
                 Print(viewModel.randomFactItem.type ?? "Type Unknown")
             }
-            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: 300, alignment: .center)
-            .background(LinearGradient(gradient: Gradient(colors: [Color.pink, Color.yellow]), startPoint: .topLeading, endPoint: .bottomTrailing))
-            .cornerRadius(20)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
-            .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
+            .displayResult()
                         
             Spacer()
             
