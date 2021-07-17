@@ -79,7 +79,7 @@ struct YearView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color.purple)
+                .background(Color("woollyColor3"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {

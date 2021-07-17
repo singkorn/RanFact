@@ -45,6 +45,12 @@ struct RandomView: View {
                     Text(String(viewModel.randomFactItem.found ?? false))
                     Text(viewModel.randomFactItem.type ?? "Type Unknown")
                 }
+                
+                Button(action: shareButton, label: {
+                    Text("Share")
+                    Image(systemName: "square.and.arrow.up")
+                })
+                
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
                 Print(String(viewModel.randomFactItem.year ?? 0))
@@ -84,6 +90,13 @@ struct RandomView: View {
     
     private func endEditing() {
         UIApplication.shared.endEditing()
+    }
+    
+    func shareButton() {
+        let sharedText: String = viewModel.randomFactItem.text ?? "Randomized by ChocBox"
+        let activityController = UIActivityViewController(activityItems: [sharedText + " #ChocBox"], applicationActivities: nil)
+        
+        UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
     }
 }
 
