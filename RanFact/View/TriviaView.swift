@@ -13,6 +13,7 @@ struct TriviaView: View {
     @State private var name: String = ""
     @State private var selectorIndex = 0
     @State private var selectedRandomType = "trivia"
+    @State private var triviaNum = ""
     
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
@@ -20,21 +21,13 @@ struct TriviaView: View {
         
         VStack {
             
-            Spacer()
-                .frame(height: 200)
-            
             VStack(alignment: .center) {
-                TextField("Enter text...", text: $name, onEditingChanged: { (changed) in
-                    print("Username onEditingChanged - \(changed)")
-                }) {
-                    print("Username onCommit")
-                }
-                .keyboardType(.numberPad)
-                .onTapGesture {
-                    self.endEditing()
-                }
-                
-                Text("You typed: \(name)")
+                TextField("What's the number?", text: $triviaNum)
+                    .padding()
+                    .keyboardType(.numberPad)
+                    .multilineTextAlignment(.center)
+
+                Text("Your number is \(triviaNum)")
             }
             .inputResult()
             
@@ -63,13 +56,14 @@ struct TriviaView: View {
             .displayResult()
                         
             Spacer()
+                .frame(height: 20)
             
             VStack {
                 Button(action: {
                     print("Button Pressed...")
-                    print("Typed Text: \(name)")
+                    print("Typed Text: \(triviaNum)")
                     print("Selected Random Type: \(selectedRandomType)")
-                    viewModel.fetchData(selectedRandomNumber: name, selectedRandomType: selectedRandomType)
+                    viewModel.fetchData(selectedRandomNumber: triviaNum, selectedRandomType: selectedRandomType)
                 }) {
                     HStack {
                         Image(systemName: "magnifyingglass.circle.fill")
@@ -79,7 +73,7 @@ struct TriviaView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color.purple)
+                .background(Color("woollyColor3"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {
@@ -89,7 +83,8 @@ struct TriviaView: View {
             self.hideKeyboard()
         }
         .padding(.all, 20)
-        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
+        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+        .background(Image("woollyImage4")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {

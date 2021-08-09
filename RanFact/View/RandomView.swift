@@ -20,29 +20,18 @@ struct RandomView: View {
         
         VStack {
             
-            Spacer()
-                .frame(height: 200)
-            
-            VStack(alignment: .center) {
-                TextField("Enter text...", text: $name, onEditingChanged: { (changed) in
-                    print("Username onEditingChanged - \(changed)")
-                }) {
-                    print("Username onCommit")
-                }.onTapGesture {
-                    self.endEditing()
-                }
-                
-                Text("You typed: \(name)")
-            }
-            .inputResult()
+            Circle()
+                .fill(Color("woollyColor1"))
+                .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
+                .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
             
             VStack(alignment: .leading) {
                 Group {
-                    Text(viewModel.randomFactItem.date ?? "Date Unknown")
-                    Text(viewModel.randomFactItem.text ?? "Text Unknown")
+                    Text(self.viewModel.randomFactItem.date ?? "Date Unknown")
+                    Text(self.viewModel.randomFactItem.text ?? "Text Unknown")
                     Text(String(viewModel.randomFactItem.year ?? 0))
                     Text(String(viewModel.randomFactItem.number ?? 0))
-                    Text(String(viewModel.randomFactItem.found ?? false))
                     Text(viewModel.randomFactItem.type ?? "Type Unknown")
                 }
                 
@@ -61,6 +50,7 @@ struct RandomView: View {
             .displayResult()
                         
             Spacer()
+                .frame(height: 20)
             
             VStack {
                 Button(action: {
@@ -77,15 +67,15 @@ struct RandomView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color.purple)
+                .background(Color("woollyColor3"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {
             viewModel.fetchData()
         })
         .padding(.all, 20)
-        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
-
+        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+        .background(Image("woollyImage2")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {

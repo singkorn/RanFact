@@ -26,7 +26,7 @@ struct MainView: View {
                 .tabItem {
                     Label("Math", systemImage: "number.square")
                 }
-            DateView()
+            TestView()
                 .tabItem {
                     Label("Date", systemImage: "calendar.circle")
                 }

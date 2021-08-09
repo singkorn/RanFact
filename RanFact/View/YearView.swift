@@ -13,40 +13,36 @@ struct YearView: View {
     @State private var name: String = ""
     @State private var selectorIndex = 0
     @State private var selectedRandomType = "year"
-    
+    @State private var year = Calendar.current.component(.year, from: Date())
+    @State private var selectedYear: Int = 2020
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
     var body: some View {
-        
-        VStack {
-            Spacer()
-                .frame(height: 200)
-            
-            VStack(alignment: .center) {
-                TextField("Enter text...", text: $name, onEditingChanged: { (changed) in
-                    print("Username onEditingChanged - \(changed)")
-                }) {
-                    print("Username onCommit")
-                }
-                .keyboardType(.numberPad)
-                .onTapGesture {
-                    self.endEditing()
-                }
                 
-                Text("You typed: \(name)")
-            }
-            .inputResult()
+        VStack {
             
-            VStack(alignment: .leading) {
+            VStack {
+                Picker("Select Year: ", selection: $selectedYear) {
+                    ForEach(1..<Int(year)+1) {
+                        Text(String($0))
+                    }
+                }
+                .pickerStyle(WheelPickerStyle())
+                Text("Selected Year: \(selectedYear+1)")
+            }
+            
+            VStack {
                 Group {
-                    Text(viewModel.randomFactItem.date ?? "Date Unknown")
-                    Text(viewModel.randomFactItem.text ?? "Text Unknown")
+                    let str = "On \(self.viewModel.randomFactItem.date ?? "what date may I recall"), \(self.viewModel.randomFactItem.year ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
+//                    Text(viewModel.randomFactItem.date ?? "")
+//                    Text(viewModel.randomFactItem.text ?? "")
+                    Text(str)
                     Text(String(viewModel.randomFactItem.year ?? 0))
                     Text(String(viewModel.randomFactItem.number ?? 0))
-                    Text(String(viewModel.randomFactItem.found ?? false))
-                    Text(viewModel.randomFactItem.type ?? "Type Unknown")
+                    Text(viewModel.randomFactItem.type ?? "")
                 }
-                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 3)
+                
+                Spacer(minLength: 10)
                 
                 Button(action: shareButton, label: {
                     Text("Share")
@@ -61,9 +57,7 @@ struct YearView: View {
                 Print(viewModel.randomFactItem.type ?? "Type Unknown")
             }
             .displayResult()
-                        
-            Spacer()
-            
+                                    
             VStack {
                 Button(action: {
                     print("Button Pressed...")
@@ -85,11 +79,12 @@ struct YearView: View {
         }.onAppear(perform: {
             viewModel.fetchData()
         })
+        .padding()
         .onTapGesture {
             self.hideKeyboard()
         }
-        .padding(.all, 20)
-        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
+        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+        .background(Image("woollyImage1")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {

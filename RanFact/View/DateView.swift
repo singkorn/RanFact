@@ -19,9 +19,6 @@ struct DateView: View {
     var body: some View {
         
         VStack {
-                        
-            Spacer()
-                .frame(height: 200)
 
             VStack(alignment: .center) {
                 TextField("Enter text...", text: $name, onEditingChanged: { (changed) in
@@ -37,7 +34,7 @@ struct DateView: View {
                 Text("You typed: \(name)")
             }
             .inputResult()
-                        
+                    
             VStack(alignment: .leading) {
                 Group {
                     Text(viewModel.randomFactItem.date ?? "Date Unknown")
@@ -63,7 +60,8 @@ struct DateView: View {
             .displayResult()
                         
             Spacer()
-            
+                .frame(height: 20)
+
             VStack {
                 Button(action: {
                     print("Button Pressed...")
@@ -79,7 +77,7 @@ struct DateView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color.purple)
+                .background(Color("woollyColor3"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {
@@ -89,7 +87,8 @@ struct DateView: View {
             self.hideKeyboard()
         }
         .padding(.all, 20)
-        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .bottom)
+        .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
+        .background(Image("woollyImage5")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {
