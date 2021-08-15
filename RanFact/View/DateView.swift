@@ -10,30 +10,55 @@ import SwiftUI
 struct DateView: View {
     
     @ObservedObject var viewModel = RandomFactViewModel()
-    @State private var name: String = ""
     @State private var selectorIndex = 0
     @State private var selectedRandomType = "date"
+    @State private var day: Int = 32
+    @State private var month: Int = 13
+    @State private var selectedDate: String = "9/2"
+    @State private var selectedDay: Int = 15
+    @State private var selectedMonth: Int = 7
     
     var randomTypes = ["year", "trivia", "random", "math", "date"]
     
     var body: some View {
         
         VStack {
-
+            
             VStack(alignment: .center) {
-                TextField("Enter text...", text: $name, onEditingChanged: { (changed) in
-                    print("Username onEditingChanged - \(changed)")
-                }) {
-                    print("Username onCommit")
+                HStack(alignment: .center) {
+                    Text("Day")
+                        .clipped()
+                        .padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .border(Color.red)
+                    Text("/")
+                    Text("Month")
+                        .clipped()
+                        .padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                        .border(Color.blue)
                 }
-                .keyboardType(.numberPad)
-                .onTapGesture {
-                    self.endEditing()
+                HStack {
+                    Picker("Day", selection: $selectedDay) {
+                        ForEach(1..<day) {
+                            Text("\($0)")
+                        }
+                    }
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipped()
+                    .border(Color.red)
+                    
+                    Picker("Month", selection: $selectedMonth) {
+                        ForEach(1..<month) {
+                            Text("\($0)")
+                        }
+                    }
+                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .clipped()
+                    .border(Color.blue)
                 }
-                
-                Text("You typed: \(name)")
+//                selectedDate = String("\(selectedMonth+1)/\(selectedDay+1)")
+                Text("\(selectedDay+1)/\(selectedMonth+1)")
+                    .padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }
-            .inputResult()
                     
             VStack(alignment: .leading) {
                 Group {
@@ -65,9 +90,9 @@ struct DateView: View {
             VStack {
                 Button(action: {
                     print("Button Pressed...")
-                    print("Typed Text: \(name)")
+                    print("Typed Text: \(String("\(selectedMonth+1)/\(selectedDay+1)"))")
                     print("Selected Random Type: \(selectedRandomType)")
-                    viewModel.fetchData(selectedRandomNumber: name, selectedRandomType: selectedRandomType)
+                    viewModel.fetchData(selectedRandomNumber: String("\(selectedMonth+1)/\(selectedDay+1)"), selectedRandomType: selectedRandomType)
                 }) {
                     HStack {
                         Image(systemName: "magnifyingglass.circle.fill")
@@ -88,7 +113,7 @@ struct DateView: View {
         }
         .padding(.all, 20)
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-        .background(Image("woollyImage5")).ignoresSafeArea(.all)
+//        .background(Image("woollyImage5")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {

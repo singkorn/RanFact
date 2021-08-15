@@ -13,13 +13,27 @@ struct TestView: View {
     @State var selectedDate = Date()
     @State private var selectedDay = 15
     @State private var selectedMonth = 7
-    
+    private var circleColor = Color(UIColor.systemGray)
+
     var body: some View {
         VStack {
-            HStack {
+            
+            ZStack {
+              Circle()
+                .stroke(Color("woollyColor3"), lineWidth: 4)
+
+              Text("13")
+            }
+            .frame(width: 100, height: 100)
+            
+            HStack(alignment: .center) {
                 Text("Day")
-                Spacer()
+                    .clipped()
+                    .border(Color.red)
+                Text("/")
                 Text("Month")
+                    .clipped()
+                    .border(Color.blue)
             }
             HStack {
                 Picker("Day", selection: $selectedDay) {
@@ -27,12 +41,18 @@ struct TestView: View {
                         Text("\($0)")
                     }
                 }
+                .frame(maxWidth: 100)
+                .clipped()
+                .border(Color.red)
                 
                 Picker("Month", selection: $selectedMonth) {
                     ForEach(1..<13) {
                         Text("\($0)")
                     }
                 }
+                .frame(maxWidth: 100)
+                .clipped()
+                .border(Color.blue)
             }
             
             DatePicker("", selection: $selectedDate, displayedComponents: .date)

@@ -61,9 +61,9 @@ struct YearView: View {
             VStack {
                 Button(action: {
                     print("Button Pressed...")
-                    print("Typed Text: \(name)")
+                    print("Typed Text: \(String(selectedYear+1))")
                     print("Selected Random Type: \(selectedRandomType)")
-                    viewModel.fetchData(selectedRandomNumber: name, selectedRandomType: selectedRandomType)
+                    viewModel.fetchData(selectedRandomNumber: String(selectedYear+1), selectedRandomType: selectedRandomType)
                 }) {
                     HStack {
                         Image(systemName: "magnifyingglass.circle.fill")
@@ -84,7 +84,7 @@ struct YearView: View {
             self.hideKeyboard()
         }
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-        .background(Image("woollyImage1")).ignoresSafeArea(.all)
+//        .background(Image("woollyImage1")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {

@@ -27,6 +27,7 @@
 		B4537B7F26A684EB006CD665 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4537B7E26A684EB006CD665 /* Fonts.swift */; };
 		B461BCE3265B85A400E9514C /* RandomFactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE2265B85A400E9514C /* RandomFactModel.swift */; };
 		B461BCE6265C022700E9514C /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B461BCE5265C022700E9514C /* API.swift */; };
+		B46FBC7126C8E7FD00EB1695 /* TestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46FBC7026C8E7FD00EB1695 /* TestView2.swift */; };
 		B4A145F22666A6950014A8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */; };
 		B4A145F32666A6950014A8F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */; };
 		B4BBAAC42666951E00E42F74 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = B4BBAAC32666951E00E42F74 /* FirebaseMessaging */; };
@@ -84,6 +85,7 @@
 		B4537B7E26A684EB006CD665 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		B461BCE2265B85A400E9514C /* RandomFactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomFactModel.swift; sourceTree = "<group>"; };
 		B461BCE5265C022700E9514C /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		B46FBC7026C8E7FD00EB1695 /* TestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView2.swift; sourceTree = "<group>"; };
 		B4A145F12666A6950014A8F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B4BBAAC126668D9F00E42F74 /* RanFact.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RanFact.entitlements; sourceTree = "<group>"; };
 		B4CAAD5C26A02DA400D7038A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				B4252A232688DA1E00D2D426 /* TriviaView.swift */,
 				B4252A252688DEF100D2D426 /* DateView.swift */,
 				B4CAAD5C26A02DA400D7038A /* TestView.swift */,
+				B46FBC7026C8E7FD00EB1695 /* TestView2.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				B4348F972651242A0081AE00 /* RandomFactViewModel.swift in Sources */,
 				B4537B7F26A684EB006CD665 /* Fonts.swift in Sources */,
 				B4FFB7A226526620003E300E /* ShareSheet.swift in Sources */,
+				B46FBC7126C8E7FD00EB1695 /* TestView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

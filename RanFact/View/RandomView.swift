@@ -20,20 +20,23 @@ struct RandomView: View {
         
         VStack {
             
-            Circle()
-                .fill(Color("woollyColor1"))
-                .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
-                .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
+            ZStack {
+                Circle()
+                    .fill(Color("woollyColor1"))
+                    .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
+                    .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
+                Text(String(viewModel.randomFactItem.number ?? 0))
+                    .font(.largeTitle)
+            }
             
             VStack(alignment: .leading) {
                 Group {
-                    Text(self.viewModel.randomFactItem.date ?? "Date Unknown")
                     Text(self.viewModel.randomFactItem.text ?? "Text Unknown")
-                    Text(String(viewModel.randomFactItem.year ?? 0))
                     Text(String(viewModel.randomFactItem.number ?? 0))
-                    Text(viewModel.randomFactItem.type ?? "Type Unknown")
                 }
+                
+                Spacer()
                 
                 Button(action: shareButton, label: {
                     Text("Share")
@@ -75,7 +78,7 @@ struct RandomView: View {
         })
         .padding(.all, 20)
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-        .background(Image("woollyImage2")).ignoresSafeArea(.all)
+//        .background(Image("woollyImage2")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {
