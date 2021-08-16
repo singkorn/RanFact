@@ -33,8 +33,8 @@ struct RandomView: View {
             VStack(alignment: .leading) {
                 Group {
                     Text(self.viewModel.randomFactItem.text ?? "Text Unknown")
-                    Text(String(viewModel.randomFactItem.number ?? 0))
                 }
+                .padding(20)
                 
                 Spacer()
                 

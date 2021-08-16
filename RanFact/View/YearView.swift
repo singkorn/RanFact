@@ -28,19 +28,14 @@ struct YearView: View {
                     }
                 }
                 .pickerStyle(WheelPickerStyle())
-                Text("Selected Year: \(selectedYear+1)")
             }
             
             VStack {
                 Group {
-                    let str = "On \(self.viewModel.randomFactItem.date ?? "what date may I recall"), \(self.viewModel.randomFactItem.year ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
-//                    Text(viewModel.randomFactItem.date ?? "")
-//                    Text(viewModel.randomFactItem.text ?? "")
+                    let str = "On \(self.viewModel.randomFactItem.date ?? "the date that I do not remember in") \(self.viewModel.randomFactItem.number ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
                     Text(str)
-                    Text(String(viewModel.randomFactItem.year ?? 0))
-                    Text(String(viewModel.randomFactItem.number ?? 0))
-                    Text(viewModel.randomFactItem.type ?? "")
                 }
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
                 
                 Spacer(minLength: 10)
                 

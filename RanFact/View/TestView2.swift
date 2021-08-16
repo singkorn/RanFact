@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TestView2: View {
     var body: some View {
+//        ScrollView(.vertical, showsIndicators: true) {
         VStack {
             Group {
                 Spacer()
@@ -70,6 +71,7 @@ struct TestView2: View {
             Spacer()
         }
         .background(Color.red)
+//        }
     }
 }
 

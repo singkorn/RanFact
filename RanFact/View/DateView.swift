@@ -62,12 +62,8 @@ struct DateView: View {
                     
             VStack(alignment: .leading) {
                 Group {
-                    Text(viewModel.randomFactItem.date ?? "Date Unknown")
                     Text(viewModel.randomFactItem.text ?? "Text Unknown")
                     Text(String(viewModel.randomFactItem.year ?? 0))
-                    Text(String(viewModel.randomFactItem.number ?? 0))
-                    Text(String(viewModel.randomFactItem.found ?? false))
-                    Text(viewModel.randomFactItem.type ?? "Type Unknown")
                 }
                 
                 Button(action: shareButton, label: {
