@@ -29,6 +29,9 @@ struct MathView: View {
             }
             .inputResult()
             
+            Spacer()
+                .frame(height: 20)
+            
             VStack(alignment: .leading) {
                 Group {
                     Text(viewModel.randomFactItem.text ?? "Text Unknown")

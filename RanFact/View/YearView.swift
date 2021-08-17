@@ -29,20 +29,16 @@ struct YearView: View {
                 }
                 .pickerStyle(WheelPickerStyle())
             }
+            .frame(width: 300, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             VStack {
                 Group {
                     let str = "On \(self.viewModel.randomFactItem.date ?? "the date that I do not remember in") \(self.viewModel.randomFactItem.number ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
                     Text(str)
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
-                
-                Spacer(minLength: 10)
-                
-                Button(action: shareButton, label: {
-                    Text("Share")
-                    Image(systemName: "square.and.arrow.up")
-                })
                 
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
@@ -53,6 +49,17 @@ struct YearView: View {
             }
             .displayResult()
                                     
+            Spacer()
+                .frame(height: 20)
+            
+            Button(action: shareButton, label: {
+                Text("Share")
+                Image(systemName: "square.and.arrow.up")
+            })
+            
+            Spacer()
+                .frame(height: 20)
+            
             VStack {
                 Button(action: {
                     print("Button Pressed...")
