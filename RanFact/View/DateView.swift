@@ -27,7 +27,7 @@ struct DateView: View {
                 .font(.system(size: 48))
             
             Spacer()
-                .frame(height: 100)
+                .frame(height: 50)
             
             VStack(alignment: .center) {
                 HStack(alignment: .center) {
@@ -61,8 +61,8 @@ struct DateView: View {
                     .border(Color.blue)
                 }
 //                selectedDate = String("\(selectedMonth+1)/\(selectedDay+1)")
-                Text("\(selectedDay+1)/\(selectedMonth+1)")
-                    .padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+//                Text("\(selectedDay+1)/\(selectedMonth+1)")
+//                    .padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }
                     
             VStack(alignment: .leading) {
@@ -70,11 +70,8 @@ struct DateView: View {
                     Text(viewModel.randomFactItem.text ?? "Text Unknown")
                     Text(String(viewModel.randomFactItem.year ?? 0))
                 }
-                
-                Button(action: shareButton, label: {
-                    Text("Share")
-                    Image(systemName: "square.and.arrow.up")
-                })
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
+                .font(.system(size: 18).bold())
                 
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
@@ -85,6 +82,14 @@ struct DateView: View {
             }
             .displayResult()
                         
+            Spacer()
+                .frame(height: 20)
+            
+            Button(action: shareButton, label: {
+                Text("💞 Share 📦")
+                Image(systemName: "square.and.arrow.up")
+            })
+            
             Spacer()
                 .frame(height: 20)
 
@@ -103,7 +108,7 @@ struct DateView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color("woollyColor3"))
+                .background(Color("color.cyanite"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {

@@ -24,7 +24,7 @@ struct YearView: View {
                 .font(.system(size: 48))
             
             Spacer()
-                .frame(height: 100)
+                .frame(height: 50)
             
             VStack {
                 Picker("Select Year: ", selection: $selectedYear) {
@@ -44,6 +44,7 @@ struct YearView: View {
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
+                .font(.system(size: 18).bold())
                 
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
@@ -80,7 +81,7 @@ struct YearView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color("woollyColor3"))
+                .background(Color("color.cyanite"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {

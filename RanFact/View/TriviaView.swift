@@ -41,11 +41,8 @@ struct TriviaView: View {
                 Group {
                     Text(viewModel.randomFactItem.text ?? "Text Unknown")
                 }
-                
-                Button(action: shareButton, label: {
-                    Text("Share")
-                    Image(systemName: "square.and.arrow.up")
-                })
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
+                .font(.system(size: 18).bold())
                 
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
@@ -56,6 +53,14 @@ struct TriviaView: View {
             }
             .displayResult()
                         
+            Spacer()
+                .frame(height: 20)
+            
+            Button(action: shareButton, label: {
+                Text("💞 Share 📦")
+                Image(systemName: "square.and.arrow.up")
+            })
+            
             Spacer()
                 .frame(height: 20)
             
@@ -74,7 +79,7 @@ struct TriviaView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color("woollyColor3"))
+                .background(Color("color.cyanite"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {

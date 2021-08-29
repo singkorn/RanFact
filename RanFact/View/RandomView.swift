@@ -28,7 +28,7 @@ struct RandomView: View {
             ZStack {
                 Circle()
                     .fill(Color("color.wildcaribbeangreen"))
-                    .frame(width: 200, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .frame(width: 150, height: 150, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
                     .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
                 Text(String(viewModel.randomFactItem.number ?? 0))
@@ -43,6 +43,9 @@ struct RandomView: View {
                     Text(self.viewModel.randomFactItem.text ?? "Text Unknown")
                 }
                 .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: .infinity, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
+                .font(.system(size: 18).bold())
+
                 
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
@@ -57,7 +60,7 @@ struct RandomView: View {
                 .frame(height: 20)
             
             Button(action: shareButton, label: {
-                Text("Share")
+                Text("💞 Share 📦")
                 Image(systemName: "square.and.arrow.up")
             })
             
@@ -79,7 +82,7 @@ struct RandomView: View {
                 }
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color("woollyColor3"))
+                .background(Color("color.cyanite"))
                 .cornerRadius(8.0)
             }
         }.onAppear(perform: {
