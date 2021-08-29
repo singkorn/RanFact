@@ -20,6 +20,11 @@ struct YearView: View {
     var body: some View {
                 
         VStack {
+            Text("🗓 Year 🗓")
+                .font(.system(size: 48))
+            
+            Spacer()
+                .frame(height: 100)
             
             VStack {
                 Picker("Select Year: ", selection: $selectedYear) {
@@ -33,7 +38,7 @@ struct YearView: View {
             
             VStack {
                 Group {
-                    let str = "On \(self.viewModel.randomFactItem.date ?? "the date that I do not remember in") \(self.viewModel.randomFactItem.number ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
+                    let str = "On \(self.viewModel.randomFactItem.date ?? "the date 📆 that I do not remember in") \(self.viewModel.randomFactItem.number ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
                     Text(str)
                         .padding()
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -53,7 +58,7 @@ struct YearView: View {
                 .frame(height: 20)
             
             Button(action: shareButton, label: {
-                Text("Share")
+                Text("💞 Share 📦")
                 Image(systemName: "square.and.arrow.up")
             })
             
@@ -86,7 +91,7 @@ struct YearView: View {
             self.hideKeyboard()
         }
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-//        .background(Image("woollyImage1")).ignoresSafeArea(.all)
+        .background(Color("color.casandorayellow")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {

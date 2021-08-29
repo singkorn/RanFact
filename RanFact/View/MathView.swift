@@ -20,6 +20,11 @@ struct MathView: View {
     var body: some View {
         
         VStack {
+            Text("🧮 Math 🔢")
+                .font(.system(size: 48))
+            
+            Spacer()
+                .frame(height: 50)
             
             VStack(alignment: .center) {
                 TextField("What's the number?", text: $mathNum)
@@ -80,7 +85,7 @@ struct MathView: View {
         }
         .padding(.all, 20)
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-//        .background(Image("woollyImage3")).ignoresSafeArea(.all)
+        .background(Color("color.casandorayellow")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {
