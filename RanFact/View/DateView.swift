@@ -4,7 +4,7 @@
 //
 //  Created by Singkorn Dhepyasuvan on 27/6/2564 BE.
 //
-
+import Foundation
 import SwiftUI
 
 struct DateView: View {
@@ -64,11 +64,13 @@ struct DateView: View {
 //                Text("\(selectedDay+1)/\(selectedMonth+1)")
 //                    .padding(.all, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
             }
-                    
+            
+            showDate()
+            
             VStack(alignment: .leading) {
                 Group {
+                    Text("Year: \(String(viewModel.randomFactItem.year ?? 0))")
                     Text(viewModel.randomFactItem.text ?? "Text Unknown")
-                    Text(String(viewModel.randomFactItem.year ?? 0))
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
                 .font(.system(size: 18).bold())
@@ -119,7 +121,7 @@ struct DateView: View {
         }
         .padding(.all, 20)
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-        .background(Color("color.casandorayellow")).ignoresSafeArea(.all)
+        .background(Color("color.wildcaribbeangreen")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {
@@ -131,6 +133,15 @@ struct DateView: View {
         let activityController = UIActivityViewController(activityItems: [sharedText + " #ChocBox"], applicationActivities: nil)
         
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
+    }
+    
+    func showDate() -> some View {
+        let dateString = "02/09/1976"
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+
+        return Text(dateFormatter.string(from: dateFormatter.date(from: dateString) ?? Date()))
     }
 }
 

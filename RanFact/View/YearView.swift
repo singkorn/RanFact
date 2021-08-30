@@ -38,8 +38,10 @@ struct YearView: View {
             
             VStack {
                 Group {
-                    let str = "On \(self.viewModel.randomFactItem.date ?? "the date 📆 that I do not remember in") \(self.viewModel.randomFactItem.number ?? 0) \(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
-                    Text(str)
+                    let str1 = "On \(self.viewModel.randomFactItem.date ?? "the date 📆 that I do not remember in ") \(self.viewModel.randomFactItem.number ?? 0)"
+                    let str2 = "\(self.viewModel.randomFactItem.text ?? "from the far away paralell universe")"
+                    Text(str1)
+                    Text(str2)
                         .padding()
                         .frame(maxWidth: .infinity, alignment: .center)
                 }
