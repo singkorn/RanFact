@@ -39,26 +39,23 @@ struct InputResult: ViewModifier {
     func body(content: Content) -> some View {
         content
             .padding()
-            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 50, maxHeight: 100, alignment: .topLeading)
-//            .background(LinearGradient(gradient: Gradient(colors: [Color("woollyColor1"), Color("woollyColor2")]), startPoint: .topLeading, endPoint: .bottomTrailing))
-            .background(Color("color.megaman"))
-            .cornerRadius(10)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
-            .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
+            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 350, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 50, maxHeight: 100, alignment: .center)
+            .overlay(
+                RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.black, lineWidth: 2)
+            )
     }
 }
 
 struct DisplayResult: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .font(.system(size: 18)).foregroundColor(.white)
-            .foregroundColor(.white)
-            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 300, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 300, maxHeight: 300, alignment: .center)
-//            .background(LinearGradient(gradient: Gradient(colors: [Color("woollyColor5"), Color("woollyColor6")]), startPoint: .topLeading, endPoint: .bottomTrailing))
-            .background(Color("color.pastelred"))
-            .cornerRadius(10)
-            .shadow(color: Color.black.opacity(0.2), radius: 5, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 2.0)
-            .shadow(color: Color.pink.opacity(0.3), radius: 20, x: /*@START_MENU_TOKEN@*/0.0/*@END_MENU_TOKEN@*/, y: 10.0)
+            .font(.system(size: 18)).foregroundColor(.black)
+            .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: 350, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: 250, alignment: .center)
+            .overlay(
+                RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.black, lineWidth: 2)
+            )
     }
 }
 

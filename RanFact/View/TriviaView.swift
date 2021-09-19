@@ -20,8 +20,12 @@ struct TriviaView: View {
     var body: some View {
         
         VStack(alignment: .center) {
-            Text("📚 Trivia 🗃")
-                .font(.system(size: 48))
+            HStack {
+                Image(systemName: "graduationcap")
+                    .font(.system(size: 48))
+                Text( "Trivia")
+                    .font(.system(size: 48))
+            }
             
             Spacer()
                 .frame(height: 50)
@@ -31,6 +35,7 @@ struct TriviaView: View {
                     .padding()
                     .keyboardType(.numberPad)
                     .multilineTextAlignment(.center)
+                    .font(.system(size: 23).bold())
             }
             .inputResult()
             
@@ -39,11 +44,12 @@ struct TriviaView: View {
             
             VStack(alignment: .leading) {
                 Group {
-                    Text(viewModel.randomFactItem.text ?? "Text Unknown")
+                    let str = "\"" + (viewModel.randomFactItem.text  ?? "Sometimes, the universe is taking too long to answer...") + "\""
+                    Text(str)
                 }
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/, 10)
-                .font(.system(size: 18).bold())
-                
+                .font(.system(size: 21).bold())
+
                 Print(viewModel.randomFactItem.date ?? "Date Unknown")
                 Print(viewModel.randomFactItem.text ?? "Text Unknown")
                 Print(String(viewModel.randomFactItem.year ?? 0))
@@ -56,32 +62,35 @@ struct TriviaView: View {
             Spacer()
                 .frame(height: 20)
             
-            Button(action: shareButton, label: {
-                Text("💞 Share 📦")
-                Image(systemName: "square.and.arrow.up")
-            })
-            
-            Spacer()
-                .frame(height: 20)
-            
-            VStack {
-                Button(action: {
-                    print("Button Pressed...")
-                    print("Typed Text: \(triviaNum)")
-                    print("Selected Random Type: \(selectedRandomType)")
-                    viewModel.fetchData(selectedRandomNumber: triviaNum, selectedRandomType: selectedRandomType)
-                }) {
-                    HStack {
-                        Image(systemName: "magnifyingglass.circle.fill")
-                        Text("Search")
-                            .padding(.horizontal)
-                    }
-                }
+            HStack {
+                Button(action: shareButton, label: {
+                    Image(systemName: "square.and.arrow.up.fill")
+                    Text("Share")
+                })
                 .padding()
                 .foregroundColor(Color.white)
-                .background(Color("color.cyanite"))
+                .background(Color("color.joustblue"))
                 .cornerRadius(8.0)
+                
+                VStack {
+                    Button(action: {
+                        print("Button Pressed...")
+                        print("Typed Text: \(triviaNum)")
+                        print("Selected Random Type: \(selectedRandomType)")
+                        viewModel.fetchData(selectedRandomNumber: triviaNum, selectedRandomType: selectedRandomType)
+                    }) {
+                        HStack {
+                            Image(systemName: "magnifyingglass.circle.fill")
+                            Text("Search")
+                        }
+                    }
+                    .padding()
+                    .foregroundColor(Color.white)
+                    .background(Color("color.darkmetalmeadow"))
+                    .cornerRadius(8.0)
+                }
             }
+
         }.onAppear(perform: {
             viewModel.fetchData()
         })
@@ -90,7 +99,7 @@ struct TriviaView: View {
         }
         .padding(.all, 20)
         .frame(minWidth: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealWidth: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, minHeight: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/, idealHeight: 200, maxHeight: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .center)
-        .background(Color("color.jigglypuff")).ignoresSafeArea(.all)
+        .background(Color("color.casandorayellow")).ignoresSafeArea(.all)
     }
     
     private func endEditing() {
@@ -98,8 +107,8 @@ struct TriviaView: View {
     }
     
     func shareButton() {
-        let sharedText: String = viewModel.randomFactItem.text ?? "Randomized by ChocBox"
-        let activityController = UIActivityViewController(activityItems: [sharedText + " #ChocBox"], applicationActivities: nil)
+        let sharedText: String = "\(triviaNum) \(viewModel.randomFactItem.text ?? "Randomized by TauLake")"
+        let activityController = UIActivityViewController(activityItems: [sharedText + " #TauLake"], applicationActivities: nil)
         
         UIApplication.shared.windows.first?.rootViewController!.present(activityController, animated: true, completion: nil)
     }
@@ -108,5 +117,7 @@ struct TriviaView: View {
 struct TriviaView_Previews: PreviewProvider {
     static var previews: some View {
        TriviaView()
+        .previewDevice(PreviewDevice(rawValue: "iPhone 8"))
+        .previewDisplayName("iPhone 8")
     }
 }
